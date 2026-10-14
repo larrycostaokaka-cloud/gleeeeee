@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111c">
+  <title>FRIDAY — Personal Assistant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="FRIDAY home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>F.R.I.D.A.Y.<small>PERSONAL ASSISTANT</small></span>
+      </a>
+      <div class="system-status"><span class="status-dot"></span> SYSTEM ONLINE</div>
+      <time class="top-clock" id="clock">--:--:--</time>
+    </header>
+
+    <section class="hero" id="home" aria-labelledby="greeting">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="line"></span> YOUR INTELLIGENT ASSISTANT</p>
+        <h1 id="greeting">Good evening.</h1>
+        <p class="hero-subtitle">I'm <strong>FRIDAY</strong>. What can I help you with?</p>
+      </div>
+      <div class="core-wrap" ari-label="FRIDAY is standing by">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="core"><span>F</span></div>
+        <span class="core-label">STANDING BY</span>
+      </div>
+    </section>
+
+    <section class="command-panel" aria-label="Assistant command">
+      <form id="command-form">
+        <label class="sr-only" for="command-input">Enter a command</label>
+        <span class="input-symbol" aria-hidden="true">⌕</span>
+        <input id="command-input" type="text" placeholder="Ask me anything..." autocomplete="off">
+        <button class="mic-button" id="mic-button" type="button" aria-label="Start voice input" title="Voice input">⌁</button>
+        <button class="send-button" type="submit">SEND <span aria-hidden="true">↗</span></button>
+      </form>
+      <p class="command-hint" id="command-hint">Try “what time is it?” or “help”</p>
+    </section>
+
+    <section class="boss-panel" aria-labelledby="boss-title">
+      <div class="boss-heading">
+        <div>
+          <p class="eyebrow">VOICE CONTROL</p>
+          <h2 id="boss-title">BOSS recognizer</h2>
+        </div>
+        <span class="boss-status" id="boss-status">VOICE LOCK: ON</span>
+      </div>
+      <p class="boss-copy">Start spoken commands with <strong>“Boss”</strong>, for example, “Boss, what time is it?” This wake word filters commands; it does not verify who is speaking.</p>
+      <div class="privacy-controls">
+        <button class="permission-button" id="camera-button" type="button">ENABLE CAMERA</button>
+        <button class="permission-button secondary" id="camera-stop-button" type="button" disabled>STOP CAMERA</button>
+        <span class="permission-status" id="permission-status" aria-live="polite">Camera is off. Access is requested only when you choose Enable Camera.</span>
+      </div>
+      <video id="camera-preview" autoplay muted playsinline aria-label="Camera preview" hidden></video>
+      <p class="privacy-note">Your browser controls microphone and camera permission. This page cannot keep either running in the background after you close it, and browser speech recognition cannot authenticate a specific person by voice.</p>
+    </section>
+
+    <section class="quick-section" aria-labelledby="quick-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">READY WHEN YOU ARE</p><h2 id="quick-title">Quick commands</h2></div>
+        <span class="section-index">01 / SHORTCUTS</span>
+      </div>
+      <div class="quick-grid">
+        <button class="quick-card" data-command="What time is it?">
+          <span class="card-icon">◷</span><span><strong>Check the time</strong><small>Get the current local time</small></span><span class="card-arrow">↗</span>
+        </button>
+        <button class="quick-card" data-command="What is today's date?">
+          <span class="card-icon">▦</span><span><strong>Today's date</strong><small>See the current date</small></span><span class="card-arrow">↗</span>
+        </button>
+        <button class="quick-card" data-command="Tell me a joke">
+          <span class="card-icon">✳</span><span><strong>Make me laugh</strong><small>Request a random joke</small></span><span class="card-arrow">↗</span>
+        </button>
+        <button class="quick-card" data-command="Help">
+          <span class="card-icon">?</span><span><strong>What can you do?</strong><small>Explore available commands</small></span><span class="card-arrow">↗</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="response" id="response" aria-live="polite" aria-atomic="true">
+      <span class="response-mark">F</span>
+      <div><p class="response-label">FRIDAY <span>JUST NOW</span></p><p class="response-text" id="response-text">All systems are operational. I'm ready to assist.</p><a class="web-search-link" id="web-search-link" target="_blank" rel="noopener noreferrer" hidden>SEARCH THE WEB ↗</a></div>
+    </section>
+
+    <footer><span>FRIDAY ASSISTANT <span class="footer-separator">/</span> LOCAL DEMO</span><span>DESIGNED FOR YOUR EVERYDAY</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
+s
